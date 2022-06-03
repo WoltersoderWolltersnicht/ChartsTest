@@ -1,0 +1,46 @@
+{
+    "Audit": {
+        "ServiceBus": {
+            "ServiceBusOverflow": [
+                {
+                    "ServiceBusConnectionString": "{secret_connectors_sb_we1}",
+                    "StorageConnectionString": "{secret_connectors_st_we1}"
+                }
+            ]
+        }
+    },
+    "Logging": {
+        "Elastic": {
+            "IndexFormat": "connectors-crl-{0:yyyy.MM.dd}"
+        }
+    },
+    "Platforms": {
+        "CRL": {
+            "Book": {
+                "ConnectorsHttpClient": 0,
+                "QuoteRequired": {
+                    "When": "Always"
+                }
+            },
+            "Cancel": {
+                "ConnectorsHttpClient": 0
+            },
+            "Quote": {
+                "ConnectorsHttpClient": 0,
+                "SearchRequired": {
+                    "When": "Never"
+                }
+            },
+            "Search": {
+                "ConnectorsHttpClient": 0
+            },
+            "SplitAccommodationCode": {
+                "Implemented": false
+            },
+            "Suppliers": [
+                "CRL",
+                "CRLTEST"
+            ]
+        }
+    }
+}
